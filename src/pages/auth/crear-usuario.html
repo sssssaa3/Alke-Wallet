@@ -28,12 +28,12 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
     <!-- nav -->
     <div class="container">
-      <header>
+      <header class="">
         <nav class="navbar navbar-expand-lg bg-white">
           <div class="container-fluid">
             <a class="navbar-brand text-primary" href="index.html"
@@ -54,18 +54,10 @@
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a
-                    class="nav-link"
-                    aria-current="page"
-                    href="./src/pages/auth/login.html"
-                    >Iniciar sesión
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="btn btn-primary"
-                    href="./src/pages/auth/crear-usuario.html"
+                    class="btn btn-outline-secondary"
+                    href="../../../index.html"
                   >
-                    Crear cuenta
+                    Volver
                   </a>
                 </li>
               </ul>
@@ -77,35 +69,62 @@
       <!-- hero -->
       <main class="">
         <section
-          class="hero d-flex flex-column flex-md-row gap-5 p-5 text-white rounded rounded-5 border shadow my-5"
+          class="hero d-flex flex-column justify-content-center align-items-center p-5 text-white rounded rounded-5 border shadow my-5"
         >
-          <div
-            class="d-flex flex-column justify-content-center gap-4 align-items-center align-items-md-start"
-          >
-            <h2 class="text-black text-center text-md-start">
-              Una cuenta digital para administrar tus activos financieros
-            </h2>
-            <a
-              href="./src/pages/auth/crear-usuario.html"
-              type="button"
-              class="btn btn-primary w-50 d-md-block d-none"
-            >
-              Crear Cuenta
-            </a>
-          </div>
+          <h2 class="text-black text-center text-md-start">
+            Registra una cuenta
+          </h2>
 
-          <img src="./src/img/hero.webp" alt="" class="img-fluid" />
-          <div>
-            <a
-              href="./src/pages/auth/crear-usuario.html"
-              type="button"
-              class="btn btn-primary w-100 d-block d-md-none"
-            >
-              Crear Cuenta
-            </a>
+          <form
+            id="form-registro"
+            class="border p-5 rounded rounded-5 shadow mb-5"
+          >
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="name@example.com"
+                required
+              />
+              <label for="email">Email address</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="********"
+                required
+                minlength="8"
+              />
+              <label for="password">Contraseña</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="password2"
+                placeholder="********"
+                required
+                minlength="8"
+              />
+              <label for="password2">Contraseña</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              Registrar
+            </button>
+          </form>
+          <div id="mensaje-alerta" class="alert" role="alert"></div>
+          <div id="spinner" class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>
         </section>
       </main>
     </div>
+    <script src="./crearUsuario.js"></script>
   </body>
 </html>
