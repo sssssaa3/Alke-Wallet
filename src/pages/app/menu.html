@@ -28,6 +28,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
@@ -52,14 +57,29 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a
-                    class="btn btn-outline-secondary"
-                    href="../../../index.html"
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-primary position-relative dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                   >
-                    Volver
-                  </a>
-                </li>
+                    Perfil
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle"
+                    >
+                      <span class="visually-hidden">New alerts</span>
+                    </span>
+                  </button>
+
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="../../../index.html"
+                        >Cerrar Sesión</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </ul>
             </div>
           </div>
@@ -71,44 +91,44 @@
         <section
           class="hero d-flex flex-column justify-content-center align-items-center p-5 text-white rounded rounded-5 border shadow my-5"
         >
-          <h2 class="text-black text-center text-md-start">Login</h2>
-
-          <form
-            id="form-registro"
-            class="border p-5 rounded rounded-5 shadow mb-5"
-          >
-            <div class="form-floating mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="name@example.com"
-                required
-              />
-              <label for="email">Email address</label>
+          <h2 class="text-black text-center text-md-start">Menu</h2>
+          <div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
 
-            <div class="form-floating mb-3">
-              <input
-                type="password"
-                class="form-control"
-                id="password"
-                placeholder="********"
-                required
-                minlength="8"
-              />
-              <label for="password">Contraseña</label>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Login</button>
-          </form>
-          <div id="mensaje-alerta" class="alert" role="alert"></div>
-          <div id="spinner" class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
     </div>
-    <script src="./login.js"></script>
+    <script src="./menu.js"></script>
   </body>
 </html>
